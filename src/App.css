@@ -1,0 +1,136 @@
+:root{
+  --casilla-default: #356F8B;
+  --casilla-desactivada: #00aF7A;
+  --casilla-contianer: #088395;
+  --fondo: #447;
+  --tamaño-casilla: 10em;
+}
+
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.pg {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.botones{
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto auto ;
+  left: -6em;
+}
+
+.botones button{
+  background-color: #088395;
+  border: none;
+  height: 2em;
+  width: 2em;
+  margin-left: 0.5em; 
+  margin-top: 0.5em; 
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 0.5em;
+  transition: all .1s ease-in;
+}
+
+.botones button:hover{
+  transform: scale(1.1);
+}
+
+.botones .c5{
+  background-color: #5a5;
+}
+
+.botones .c10{
+  background-color: #aa3;
+}
+
+.botones .c20{
+  background-color: #a2a;
+}
+
+.botones .reiniciar{
+  color: #000;
+  font-size: 1.3em;
+  height: calc(17.7px * 2);
+  width: calc(17.7px * 2);
+  margin: calc(17.7px * 0.5);
+  background-color: #a33;
+}
+
+
+.casillas{
+  background-color: var(--casilla-contianer);
+  border-radius: 1em;
+  padding: 1em 1em;
+  margin-top: 0em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 40em;
+  flex-wrap: wrap;
+}
+
+.mCasillas {
+  width: calc(var(--tamaño-casilla) * 2.6);
+}
+
+.casilla{
+  height: 2.6em;
+  width: var(--tamaño-casilla);
+  border-radius: 0.5em;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  margin: 0.2em 0.2em;
+  background-color: var(--casilla-default);
+  /* box-shadow: 0.1em 0.1em  20em rgba(255, 255, 255, .1); */
+}
+
+.casillaA {
+  background-color: var(--casilla-desactivada);
+}
+
+.casillaA:hover{
+  background-color: #00bF8A ;
+}
+
+.haveNumber{
+  background-color: #555;
+  color: #fff;
+}
+
+.numeroRandom{
+  color: #fff;
+  margin-top: 3em;
+  height: 4em;
+  border-radius: 1em;
+}
+
+h2{
+  margin: 0;
+}
+
+.gameOver{
+  display: grid;
+  place-content: center;
+  margin: 0;
+  font-size: 40px;
+  height: 3em;
+}
+
+footer{
+  display: block;
+  position: fixed;
+  bottom: 0;
+  margin-left: 20px;
+}
