@@ -25,7 +25,7 @@ section{
 .botones{
   position: absolute;
   display: grid;
-  grid-template-columns: auto auto ;
+  grid-template-columns: auto auto;
   left: -6em;
 }
 
@@ -59,12 +59,14 @@ section{
 }
 
 .botones .reiniciar{
-  color: #000;
+  color: #fff;
   font-size: 1.3em;
   height: calc(17.7px * 2);
   width: calc(17.7px * 2);
   margin: calc(17.7px * 0.5);
   background-color: #a33;
+  display: grid;
+  align-content: center;
 }
 
 
@@ -133,4 +135,8 @@ footer{
   position: fixed;
   bottom: 0;
   margin-left: 20px;
+}
+
+.reset-icon{
+  transform: translate(0, -1px);
 }

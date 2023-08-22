@@ -1,4 +1,5 @@
 import '../App.css'
+import ResetIcon from '../icons/reset'
 
 interface Props {
   reset: () => void
@@ -23,7 +24,7 @@ export default function Buttons ({ changeNumberBoxes, reset }: Props) {
         20
       </button>
       <button className="reiniciar" onClick={reset}>
-
+        <ResetIcon className='reset-icon'></ResetIcon>
       </button>
     </div>
   )
