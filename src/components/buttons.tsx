@@ -7,7 +7,7 @@ interface Props {
 
 export default function Buttons ({ changeNumberBoxes, reset }: Props) {
 
-  function handleClick (event: React.MouseEvent<HTMLElement>) {
+  function handleClick (event: any) {
     const newNumberBoxes = event.target.innerHTML
     changeNumberBoxes(Number(newNumberBoxes))
   }
