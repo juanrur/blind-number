@@ -1,0 +1,42 @@
+.botones{
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin: 8px;
+  left: -6em;
+}
+
+.botones button{
+  background-color: #088395;
+  border: none;
+  height: 2.2rem;
+  width: 2.2rem; 
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 0.5rem;
+  transition: all .1s ease;
+}
+
+.botones button:hover{
+  transform: scale(1.1);
+}
+
+.botones .c5{
+  background-color: #5a5;
+}
+
+.botones .c10{
+  background-color: #aa3;
+}
+
+.botones .c20{
+  background-color: #a2a;
+}
+
+.botones .reiniciar{
+  color: #fff;
+  background-color: #a33;
+  display: grid;
+  place-content: center;
+}

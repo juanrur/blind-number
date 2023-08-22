@@ -1,77 +1,35 @@
 :root{
   --casilla-default: #356F8B;
   --casilla-desactivada: #00aF7A;
-  --casilla-contianer: #088395;
+  --casilla-container: #088395;
   --fondo: #447;
   --tamaño-casilla: 10em;
 }
 
-section{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1em;
-}
-
-.pg {
+.casillas-container{
+  margin: 0 auto;
   position: relative;
+  display: grid;
   width: fit-content;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+  place-content: center;
 }
 
-.botones{
-  position: absolute;
-  display: grid;
-  grid-template-columns: auto auto;
-  left: -6em;
+@media (max-width: 650px) {
+  .botones{
+    left: inherit;
+    right: 0;
+    bottom: 0;
+  }
+  .casillas-container{
+    position: static;
+  }
+  :root{
+    --tamaño-casilla: 8em;
+  }
 }
-
-.botones button{
-  background-color: #088395;
-  border: none;
-  height: 2em;
-  width: 2em;
-  margin-left: 0.5em; 
-  margin-top: 0.5em; 
-  color: #fff;
-  font-size: 1.1em;
-  border-radius: 0.5em;
-  transition: all .1s ease-in;
-}
-
-.botones button:hover{
-  transform: scale(1.1);
-}
-
-.botones .c5{
-  background-color: #5a5;
-}
-
-.botones .c10{
-  background-color: #aa3;
-}
-
-.botones .c20{
-  background-color: #a2a;
-}
-
-.botones .reiniciar{
-  color: #fff;
-  font-size: 1.3em;
-  height: calc(17.7px * 2);
-  width: calc(17.7px * 2);
-  margin: calc(17.7px * 0.5);
-  background-color: #a33;
-  display: grid;
-  align-content: center;
-}
-
 
 .casillas{
-  background-color: var(--casilla-contianer);
+  background-color: var(--casilla-container);
   border-radius: 1em;
   padding: 1em 1em;
   margin-top: 0em;
@@ -95,7 +53,6 @@ section{
   border: none;
   margin: 0.2em 0.2em;
   background-color: var(--casilla-default);
-  /* box-shadow: 0.1em 0.1em  20em rgba(255, 255, 255, .1); */
 }
 
 .casillaA {
@@ -113,7 +70,7 @@ section{
 
 .numeroRandom{
   color: #fff;
-  margin-top: 3em;
+  margin: 3em auto;
   height: 4em;
   border-radius: 1em;
 }
@@ -135,8 +92,4 @@ footer{
   position: fixed;
   bottom: 0;
   margin-left: 20px;
-}
-
-.reset-icon{
-  transform: translate(0, -1px);
 }

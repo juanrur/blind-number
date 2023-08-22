@@ -4,6 +4,7 @@ import RandomNumberBox from './components/randomNumberBox'
 import Buttons from './components/buttons'
 import FinalGame from './components/finalGame'
 import { reducer, initialState } from './logic/reducer'
+import './App.css'
 
 function App () {
 
@@ -32,8 +33,7 @@ function App () {
 
       <FinalGame win={win} gameOver={gameOver}/>
 
-      <section>
-        <div className='pg'>
+        <div className='casillas-container'>
 
           <ListOfCasillas
           pushNumberInBox={pushNumberInBox}
@@ -49,7 +49,6 @@ function App () {
           <Buttons reset={reset} changeNumberBoxes={changeNumberBoxes} />
 
         </div>
-      </section>
       <footer className=''>
         <h2>by JuanR</h2>
       </footer>

@@ -1,4 +1,3 @@
-
 export interface State {
   boxesCanChange: boolean[]
   numbersInBoxes: Array<number | null>

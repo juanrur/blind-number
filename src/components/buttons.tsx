@@ -1,5 +1,5 @@
-import '../App.css'
 import ResetIcon from '../icons/reset'
+import './buttons.css'
 
 interface Props {
   reset: () => void

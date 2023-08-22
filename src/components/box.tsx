@@ -1,5 +1,3 @@
-import '../App.css'
-
 interface Props {
   number: number | null
   canChange: boolean
