@@ -4,7 +4,8 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 0.6rem;
   margin: 8px;
-  left: -6em;
+  top: 0;
+  left: -6rem;
 }
 
 .botones button{

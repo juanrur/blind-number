@@ -33,13 +33,14 @@ function App () {
 
       <FinalGame win={win} gameOver={gameOver}/>
 
-        <div className='casillas-container'>
+      <div className='casillas-container'>
 
-          <ListOfCasillas
-          pushNumberInBox={pushNumberInBox}
-          numbersInBoxes={numbersInBoxes}
-          boxesCanChange={boxesCanChange}/>
+        <ListOfCasillas
+        pushNumberInBox={pushNumberInBox}
+        numbersInBoxes={numbersInBoxes}
+        boxesCanChange={boxesCanChange}/>
 
+        <div className='randomNumber-buttons'>
           <RandomNumberBox
           isGameOver={gameOver}
           isWin={win}
@@ -47,8 +48,10 @@ function App () {
           randomNumber={randomNumber}/>
 
           <Buttons reset={reset} changeNumberBoxes={changeNumberBoxes} />
-
         </div>
+
+      </div>
+
       <footer className=''>
         <h2>by JuanR</h2>
       </footer>

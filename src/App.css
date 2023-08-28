@@ -3,55 +3,43 @@
   --casilla-desactivada: #00aF7A;
   --casilla-container: #088395;
   --fondo: #447;
-  --tamaño-casilla: 10em;
+  --tamaño-casilla: 10rem;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .casillas-container{
-  margin: 0 auto;
   position: relative;
-  display: grid;
   width: fit-content;
+  display: grid;
   place-content: center;
-}
-
-@media (max-width: 650px) {
-  .botones{
-    left: inherit;
-    right: 0;
-    bottom: 0;
-  }
-  .casillas-container{
-    position: static;
-  }
-  :root{
-    --tamaño-casilla: 8em;
-  }
+  margin: 0 auto;
 }
 
 .casillas{
   background-color: var(--casilla-container);
   border-radius: 1em;
-  padding: 1em 1em;
-  margin-top: 0em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: 8px;
   max-height: 40em;
-  flex-wrap: wrap;
 }
 
-.mCasillas {
-  width: calc(var(--tamaño-casilla) * 2.6);
-}
 
 .casilla{
-  height: 2.6em;
+  height: 3.2rem;
   width: var(--tamaño-casilla);
-  border-radius: 0.5em;
-  font-size: 20px;
+  border-radius: 10px;
+  font-size: 1.2rem;
   color: #fff;
   border: none;
-  margin: 0.2em 0.2em;
   background-color: var(--casilla-default);
 }
 
@@ -61,6 +49,55 @@
 
 .casillaA:hover{
   background-color: #00bF8A ;
+}
+
+.randomNumber-buttons{
+  position: static;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.mCasillas {
+  width: calc(var(--tamaño-casilla) * 2.25);
+}
+
+@media (max-width: 650px) {
+  .mCasillas {
+    width: calc(var(--tamaño-casilla) * 2.35);
+  }
+  
+  html{
+    font-size: 14px;
+  }
+
+  .randomNumber-buttons{
+    position: relative;
+  }
+
+  .botones{
+    position: absolute;
+    left: initial;
+    margin: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: -6.5rem;
+  }
+
+  .casilla{
+    height: 2.7rem;
+  }
+
+  .casillas{
+    max-height: 37rem;
+  }
+
+  .casillas-container{
+    position: inherit;
+  }
+
+  :root{
+    --tamaño-casilla: 8rem;
+  }
 }
 
 .haveNumber{
@@ -88,8 +125,5 @@ h2{
 }
 
 footer{
-  display: block;
-  position: fixed;
-  bottom: 0;
-  margin-left: 20px;
+  padding: 1rem;
 }
