@@ -8,7 +8,7 @@ export const initialState: State = {
   win: false
 }
 
-function checkPossibleBoxes (numbers: number[], randomNumber: number) {
+function checkPossibleBoxes (numbers: Array<number | null>, randomNumber: number) {
 
   const newBoxesCanChange = Array(numbers.length).fill(true)
 
@@ -29,7 +29,7 @@ function checkPossibleBoxes (numbers: number[], randomNumber: number) {
   return newBoxesCanChange
 }
 
-export function reducer (state: any, action: Action) {
+export function reducer (state: State, action: Action): State {
   const { type } = action
 
   if (type === 'reset') {
@@ -89,5 +89,9 @@ export function reducer (state: any, action: Action) {
         win: true
       }
     }
+  }
+
+  return {
+    ...state
   }
 }
