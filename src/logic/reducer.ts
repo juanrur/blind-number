@@ -8,7 +8,7 @@ export const initialState: State = {
   win: false
 }
 
-function checkPossibleBoxes (numbers: number[], randomNumber: number) {
+function checkPossibleBoxes (numbers: any[], randomNumber: number) {
 
   const newBoxesCanChange = Array(numbers.length).fill(true)
 
