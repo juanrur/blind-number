@@ -1,14 +1,18 @@
 interface Props {
   win: boolean
   gameOver: boolean
+  reset: () => void
 }
 
-export default function FinalGame ({ win, gameOver }: Props) {
+export default function FinalGame ({ win, gameOver, reset }: Props) {
   const text = win ? 'WIN' : gameOver ? 'GAME OVER' : ''
 
   return (
-    <div className="gameOver">
+    (gameOver || win) && (
+    <dialog className="gameOver">
       <h2>{text}</h2>
-    </div>
+      <button onClick={reset}>Reset</button>
+    </dialog>
+    )
   )
 }

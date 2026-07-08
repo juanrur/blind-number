@@ -31,7 +31,7 @@ function App () {
   return (
     <div className="App">
 
-      <FinalGame win={win} gameOver={gameOver}/>
+      <FinalGame win={win} gameOver={gameOver} reset={reset}/>
 
       <div className='casillas-container'>
 
