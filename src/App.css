@@ -9,13 +9,19 @@
 .App{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: grid;
+  place-content: center;
 }
 
 .casillas-container{
   position: relative;
-  width: fit-content;
+  height: fit-content;
   display: grid;
   place-content: center;
   margin: 0 auto;
