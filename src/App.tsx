@@ -31,26 +31,28 @@ function App () {
   return (
     <div className="App">
 
-      <FinalGame win={win} gameOver={gameOver}/>
+      <main>
+        <FinalGame win={win} gameOver={gameOver} reset={reset}/>
 
-      <div className='casillas-container'>
+        <div className='casillas-container'>
 
-        <ListOfCasillas
-        pushNumberInBox={pushNumberInBox}
-        numbersInBoxes={numbersInBoxes}
-        boxesCanChange={boxesCanChange}/>
+          <ListOfCasillas
+          pushNumberInBox={pushNumberInBox}
+          numbersInBoxes={numbersInBoxes}
+          boxesCanChange={boxesCanChange}/>
 
-        <div className='randomNumber-buttons'>
-          <RandomNumberBox
-          isGameOver={gameOver}
-          isWin={win}
-          generateNewNumber={generateNewNumber}
-          randomNumber={randomNumber}/>
+          <div className='randomNumber-buttons'>
+            <Buttons reset={reset} changeNumberBoxes={changeNumberBoxes} />
+            <RandomNumberBox
+            isGameOver={gameOver}
+            isWin={win}
+            generateNewNumber={generateNewNumber}
+            randomNumber={randomNumber}/>
 
-          <Buttons reset={reset} changeNumberBoxes={changeNumberBoxes} />
+          </div>
+
         </div>
-
-      </div>
+      </main>
 
       <footer className=''>
         <h2>by JuanR</h2>

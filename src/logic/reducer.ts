@@ -42,10 +42,16 @@ export function reducer (state: State, action: Action): State {
   }
 
   if (type === 'change_boxes_number') {
+    if (action.paylod === state.numbersInBoxes.length) {
+      return {
+        ...state
+      }
+    }
     return {
       ...state,
       boxesCanChange: Array(action.paylod).fill(false),
-      numbersInBoxes: Array(action.paylod).fill(null)
+      numbersInBoxes: Array(action.paylod).fill(null),
+      randomNumber: null
     }
   }
 

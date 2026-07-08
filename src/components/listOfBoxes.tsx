@@ -15,6 +15,8 @@ export default function ListOfBoxes ({ numbersInBoxes, boxesCanChange, pushNumbe
     {numbersInBoxes.map((number, index) => {
 
       return <Box
+        isStarted={numbersInBoxes.some(num => num !== null) || boxesCanChange.some(can => can)}
+        index={index}
         key={index}
         number={number}
         canChange={boxesCanChange[index]}
