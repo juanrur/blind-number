@@ -113,11 +113,24 @@ h2{
 }
 
 .gameOver{
-  display: grid;
-  place-content: center;
-  margin: 0;
   font-size: 40px;
-  height: 3em;
+  border-radius: 1rem;
+  text-wrap: nowrap;
+  padding: 2rem;
+  & button {
+    background-color: #a33;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto 0;
+  }
+}
+
+.gameOver::backdrop {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 footer{
