@@ -194,4 +194,6 @@ h2{
 
 footer{
   padding-left: 1rem;
+  opacity: 0.2;
+  color: white;
 }
